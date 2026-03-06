@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/auth.css";
 
-export default function Signup() {
+export default function Register() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({

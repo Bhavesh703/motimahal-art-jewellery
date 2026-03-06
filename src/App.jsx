@@ -16,7 +16,7 @@ import Search from "./pages/Search";
 import Contact from "./pages/Contact";
 import Delivery from "./pages/Delivery";
 import Login from "./pages/Login";
-import Signup from "./pages/Register";
+import Register from "./pages/Register";
 import MyOrders from "./pages/Myorders";
 import NewArrivalsPage from "./pages/NewArrivalsPage";
 
@@ -161,7 +161,7 @@ export default function App() {
 
         {/* ============ AUTH ============ */}
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/register" element={<Register />} />
 
         {/* Protected Orders */}
         <Route
