@@ -17,7 +17,7 @@ import Contact from "./pages/Contact";
 import Delivery from "./pages/Delivery";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MyOrders from "./pages/Myorders";
+import MyOrders from "./pages/MyOrders";
 import NewArrivalsPage from "./pages/NewArrivalsPage";
 
 import Terms from "./pages/Terms";
