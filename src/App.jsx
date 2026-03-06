@@ -17,7 +17,7 @@ import Contact from "./pages/Contact";
 import Delivery from "./pages/Delivery";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MyOrders from "./pages/MyOrders";
+import MyOrdersPage from "./pages/MyOrdersPage";
 import NewArrivalsPage from "./pages/NewArrivalsPage";
 
 import Terms from "./pages/Terms";
@@ -166,7 +166,7 @@ export default function App() {
         {/* Protected Orders */}
         <Route
           path="/orders"
-          element={user ? <MyOrders /> : <Navigate to="/login" />}
+          element={user ? <MyOrdersPage /> : <Navigate to="/login" />}
         />
 
         {/* ============ ADMIN PANEL ============ */}
