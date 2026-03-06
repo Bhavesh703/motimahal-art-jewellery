@@ -1,0 +1,267 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.auth-card {
+  width: 380px;
+  padding: 40px;
+  border: 1px solid #eee;
+  background: #fff;
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.divider {
+  margin: 15px 0;
+  color: #999;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* ===== Wrapper ===== */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Card ===== */
+.auth-card.luxury {
+  background: #ffffff;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.auth-header h2 {
+  margin-bottom: 8px;
+  color: #c6a769;
+  font-weight: 600;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* ===== Form ===== */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #c6a769;
+}
+
+/* ===== Gold Button ===== */
+.btn-gold {
+  width: 100%;
+  padding: 12px;
+  background: #c6a769;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  background: #b89555;
+}
+
+/* ===== Divider ===== */
+.divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+/* ===== Google Button ===== */
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ===== Footer ===== */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #c6a769;
+  text-decoration: none;
+}
+
+/* ===== Error ===== */
+.auth-error {
+  background: #ffe5e5;
+  color: red;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+/* ===== Wrapper ===== */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Card ===== */
+.auth-card.luxury {
+  background: #ffffff;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.auth-header h2 {
+  margin-bottom: 8px;
+  color: #c6a769;
+  font-weight: 600;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* ===== Form ===== */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #c6a769;
+}
+
+/* ===== Gold Button ===== */
+.btn-gold {
+  width: 100%;
+  padding: 12px;
+  background: #c6a769;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  background: #b89555;
+}
+
+/* ===== Divider ===== */
+.divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+/* ===== Google Button ===== */
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ===== Footer ===== */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #c6a769;
+  text-decoration: none;
+}
+
+/* ===== Error ===== */
+.auth-error {
+  background: #ffe5e5;
+  color: red;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}

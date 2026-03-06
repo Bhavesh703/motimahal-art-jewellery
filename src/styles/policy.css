@@ -1,0 +1,79 @@
+/* ===== Page Background ===== */
+.policy-wrapper {
+  background: #fdfbf8;
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+/* ===== Title Section ===== */
+.policy-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.policy-header h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.policy-header .gold-line {
+  width: 80px;
+  height: 3px;
+  background: #c6a769;
+  margin: 15px auto 0;
+  border-radius: 5px;
+}
+
+/* ===== Content Card ===== */
+.policy-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+  line-height: 1.8;
+}
+
+/* Headings inside content */
+.policy-card h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #c6a769;
+  font-size: 20px;
+}
+
+/* Paragraph */
+.policy-card p {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* List */
+.policy-card ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.policy-card li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .policy-wrapper {
+    padding: 50px 15px;
+  }
+
+  .policy-header h1 {
+    font-size: 26px;
+  }
+
+  .policy-card {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  /* Premium Deep Gold */
+  --gold: #c28840;
+  --gold-light: #d8a75e;
+  --gold-dark: #9e6a2c;
+
+  /* Luxury Pink Theme */
+  --pink-light: #fff2f7;
+  --pink: #ff8ab5;
+  --pink-dark: #ff3b7b;
+
+  /* Premium Text Colors */
+  --text-dark: #5b2c3d;
+  --text-light: #7d4f58;
+
+  /* Shadows */
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-gold: 0 10px 30px rgba(194, 136, 64, 0.28);
+
+  /* Radius */
+  --radius-large: 22px;
+  --radius-medium: 16px;
+  --radius-small: 8px;
+}
