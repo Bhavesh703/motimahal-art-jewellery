@@ -16,7 +16,7 @@ import Search from "./pages/Search";
 import Contact from "./pages/Contact";
 import Delivery from "./pages/Delivery";
 import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import Signup from "./pages/Signup";
 import MyOrders from "./pages/Myorders";
 import NewArrivalsPage from "./pages/NewArrivalsPage";
 
