@@ -10,6 +10,7 @@ import {
   FiPackage,
   FiSettings,
 } from "react-icons/fi";
+
 import logo from "../assets/LOGO1.png";
 import "../styles/navbar.css";
 
@@ -21,7 +22,7 @@ export default function Navbar({ cartCount, wishlistCount }) {
   const { user, logout, isAdmin } = useAuth();
   const dropdownRef = useRef(null);
 
-  // Navbar shadow on scroll
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -44,7 +45,7 @@ export default function Navbar({ cartCount, wishlistCount }) {
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
-      {/* Announcement */}
+      {/* Announcement Bar */}
       <div className="top-announcement">
         ✨ Celebrate Every Occasion with Exquisite Jhumkas & Necklaces ✨
       </div>
@@ -53,7 +54,7 @@ export default function Navbar({ cartCount, wishlistCount }) {
         {/* LOGO */}
         <Link to="/" className="logo" onClick={closeMobile}>
           <img src={logo} alt="Moti Mahal Art Jewellery" />
-          <span>Moti Mahal Art Jewellery</span>
+          <span className="logo-text">Moti Mahal Art Jewellery</span>
         </Link>
 
         {/* DESKTOP MENU */}
@@ -90,6 +91,11 @@ export default function Navbar({ cartCount, wishlistCount }) {
 
           <li>
             <Link to="/new-arrivals">New Arrivals</Link>
+          </li>
+
+          {/* NEW ABOUT PAGE */}
+          <li>
+            <Link to="/about">About</Link>
           </li>
 
           <li>
@@ -161,7 +167,7 @@ export default function Navbar({ cartCount, wishlistCount }) {
                 Login
               </Link>
 
-              <Link to="/signup" className="signup-btn">
+              <Link to="/register" className="signup-btn">
                 Create Account
               </Link>
             </div>
@@ -206,6 +212,11 @@ export default function Navbar({ cartCount, wishlistCount }) {
             New Arrivals
           </Link>
 
+          {/* ABOUT MOBILE */}
+          <Link to="/about" onClick={closeMobile}>
+            About Us
+          </Link>
+
           <Link to="/search" onClick={closeMobile}>
             Search
           </Link>
@@ -220,7 +231,7 @@ export default function Navbar({ cartCount, wishlistCount }) {
                 Login
               </Link>
 
-              <Link to="/signup" onClick={closeMobile}>
+              <Link to="/register" onClick={closeMobile}>
                 Signup
               </Link>
             </>

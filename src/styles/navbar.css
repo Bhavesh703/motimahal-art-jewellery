@@ -1,5 +1,49 @@
 @import "./variables.css";
 
+/* Hide logo text on mobile */
+
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+}
+
+/* ===== Logo ===== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 42px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* ===== MOBILE LOGO ===== */
+
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+}
+
 .navbar-wrapper {
   position: sticky;
   top: 0;

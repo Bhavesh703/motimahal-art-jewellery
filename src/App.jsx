@@ -24,6 +24,7 @@ import Terms from "./pages/Terms";
 import Returns from "./pages/Returns";
 import Shipping from "./pages/Shipping";
 import Privacy from "./pages/Privacy";
+import About from "./pages/About";
 
 import AdminRoute from "./components/AdminRoute";
 import AdminLayout from "./admin/AdminLayout";
@@ -33,6 +34,7 @@ import AddProduct from "./admin/AddProduct";
 
 import useLocalStorage from "./hooks/useLocalStorage";
 
+// ================= SCROLL TO TOP =================
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -41,6 +43,12 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
+}
+
+// ================= PROTECTED ROUTE =================
+function ProtectedRoute({ user, children }) {
+  if (!user) return <Navigate to="/login" />;
+  return children;
 }
 
 export default function App() {
@@ -68,6 +76,7 @@ export default function App() {
 
   const updateCart = (id, quantity) => {
     if (quantity < 1) return;
+
     setCart(
       cart.map((item) => (item.id === id ? { ...item, quantity } : item)),
     );
@@ -97,7 +106,7 @@ export default function App() {
       <Navbar cartCount={cart.length} wishlistCount={wishlist.length} />
 
       <Routes>
-        {/* ============ PUBLIC ROUTES ============ */}
+        {/* ================= PUBLIC ================= */}
 
         <Route
           path="/"
@@ -105,10 +114,12 @@ export default function App() {
         />
 
         <Route path="/category/:name" element={<Category />} />
+
         <Route
           path="/product/:id"
           element={<Product addToCart={addToCart} />}
         />
+
         <Route path="/new-arrivals" element={<NewArrivalsPage />} />
 
         <Route
@@ -119,23 +130,6 @@ export default function App() {
               updateCart={updateCart}
               removeFromCart={removeFromCart}
             />
-          }
-        />
-
-        {/* Protected Checkout */}
-        <Route
-          path="/checkout"
-          element={
-            user ? (
-              <Checkout
-                cartItems={cart}
-                clearCart={clearCart}
-                updateCart={updateCart}
-                removeFromCart={removeFromCart}
-              />
-            ) : (
-              <Navigate to="/login" />
-            )
           }
         />
 
@@ -150,26 +144,56 @@ export default function App() {
         />
 
         <Route path="/search" element={<Search />} />
+
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/about" element={<About />} />
+
         <Route path="/delivery" element={<Delivery />} />
 
-        {/* ============ POLICY ROUTES ============ */}
+        {/* ================= POLICIES ================= */}
+
         <Route path="/terms" element={<Terms />} />
+
         <Route path="/returns" element={<Returns />} />
+
         <Route path="/shipping" element={<Shipping />} />
+
         <Route path="/privacy" element={<Privacy />} />
 
-        {/* ============ AUTH ============ */}
+        {/* ================= AUTH ================= */}
+
         <Route path="/login" element={<Login />} />
+
         <Route path="/register" element={<Register />} />
 
-        {/* Protected Orders */}
+        {/* ================= USER PROTECTED ================= */}
+
         <Route
-          path="/orders"
-          element={user ? <MyOrdersPage /> : <Navigate to="/login" />}
+          path="/checkout"
+          element={
+            <ProtectedRoute user={user}>
+              <Checkout
+                cartItems={cart}
+                clearCart={clearCart}
+                updateCart={updateCart}
+                removeFromCart={removeFromCart}
+              />
+            </ProtectedRoute>
+          }
         />
 
-        {/* ============ ADMIN PANEL ============ */}
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute user={user}>
+              <MyOrdersPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* ================= ADMIN ================= */}
+
         <Route
           path="/admin"
           element={
@@ -181,10 +205,12 @@ export default function App() {
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
           <Route path="add-product" element={<AddProduct />} />
+
           <Route index element={<Navigate to="products" replace />} />
         </Route>
 
-        {/* ============ 404 PAGE ============ */}
+        {/* ================= 404 ================= */}
+
         <Route
           path="*"
           element={
