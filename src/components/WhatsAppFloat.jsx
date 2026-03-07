@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../styles/whatsapp.css";
 
 export default function WhatsAppFloat() {
-  const phone = "919999999999"; // 👉 Replace with your real number (with country code)
+  const phone = "7710013125"; // 👉 Replace with your real number (with country code)
 
   return (
     <a

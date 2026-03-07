@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <p>Email: motimahalartjewellery25@gmail.com</p>
-          <p>WhatsApp: +91-XXXXXXXXXX</p>
+          <p>WhatsApp: +91-7710013125</p>
         </div>
       </div>
 
