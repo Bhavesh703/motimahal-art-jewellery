@@ -8,7 +8,7 @@
   }
 
   .logo img {
-    height: 38px;
+    height: 55px;
   }
 }
 
@@ -22,13 +22,13 @@
 }
 
 .logo img {
-  height: 42px;
+  height: 76px;
 }
 
 .logo-text {
   font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: #5b2c3d;
   white-space: nowrap;
 }
 
